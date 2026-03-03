@@ -6,7 +6,7 @@ const API_BASE = import.meta.env.VITE_API_URL;
  */
 export async function executeCode(language, code) {
   try {
-    const response = await fetch(`${API_BASE}/api/execute`, {
+    const response = await fetch(`${API_BASE}/execute`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
