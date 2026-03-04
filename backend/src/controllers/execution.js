@@ -11,7 +11,6 @@ import { v4 as uuidv4 } from "uuid";
 
 export const executeCode = async (req, res) => {
   const { code, language } = req.body;
-  console.log("Request body:", req.body);
 
   if (!code || !language) {
     return res.status(400).json({

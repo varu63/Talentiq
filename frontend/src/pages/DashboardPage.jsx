@@ -30,31 +30,10 @@ function DashboardPage() {
         difficulty: roomConfig.difficulty.toLowerCase(),
       },
       {
-        // onSuccess: (data) => {
-        //   setShowCreateModal(false);
-        //   navigate(`/session/${data.session._id}`);
-        // },
-onSuccess: (data) => {
-  console.log("FULL RESPONSE:", data);
-
-  if (!data) {
-    console.error("No data returned");
-    return;
-  }
-
-  if (!data.session) {
-    console.error("No session object:", data);
-    return;
-  }
-
-  if (!data.session._id) {
-    console.error("No session._id:", data.session);
-    return;
-  }
-
-  setShowCreateModal(false);
-  navigate(`/session/${data.session._id}`);
-},
+        onSuccess: (data) => {
+          setShowCreateModal(false);
+          navigate(`/session/${data.session._id}`);
+        },
       }
     );
   };
