@@ -14,11 +14,8 @@ import executionRoutes from "./routes/executionRoutes.js";
 const app = express();
 
 // Middleware
-// app.use(cors({ origin: ENV.CLIENT_URL, credentials: true }));// Ensure ENV.CLIENT_URL is your Frontend URL
-app.use(cors({
-  origin: "http://localhost:5173", // Replace with your frontend URL
-  credentials: true
-}));
+app.use(cors({ origin: ENV.CLIENT_URL, credentials: true }));// Ensure ENV.CLIENT_URL is your Frontend URL
+
 app.use(express.json()); 
 app.use(clerkMiddleware());
 console.log("CLIENT_URL =", ENV.CLIENT_URL); 
