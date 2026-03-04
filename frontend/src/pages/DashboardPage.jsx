@@ -35,7 +35,7 @@ function DashboardPage() {
         //   navigate(`/session/${data.session._id}`);
         // },
 onSuccess: (data) => {
-  console.log("FULL RESPONSE:", data.session._id);
+  console.log("FULL RESPONSE:", data);
 
   if (!data) {
     console.error("No data returned");
